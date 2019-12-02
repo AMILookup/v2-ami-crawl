@@ -1,0 +1,23 @@
+{
+  "name": "v2-ami-crawl",
+  "version": "1.0.0",
+  "description": "Lambda that crawls for ami's based on specified region.  This feeds SQS for later consumtion.",
+  "main": "lambda.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMILookup/v2-ami-crawl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AMILookup/v2-ami-crawl/issues"
+  },
+  "homepage": "https://github.com/AMILookup/v2-ami-crawl#readme",
+  "dependencies": {
+    "aws": "0.0.3-2",
+    "aws-sdk": "^2.578.0"
+  }
+}
