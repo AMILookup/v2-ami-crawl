@@ -12,8 +12,9 @@ AWS.config.getCredentials(function(err) {
     if (err) console.log(err.stack);
     // credentials not loaded
     else {
-      console.log("Access key:", AWS.config.credentials.accessKeyId);
-      console.log("Secret access key:", AWS.config.credentials.secretAccessKey);
+        console.log("Credentials Accessed");
+        // console.log("Access key:", AWS.config.credentials.accessKeyId);
+        // console.log("Secret access key:", AWS.config.credentials.secretAccessKey);
     }
   });
 
@@ -37,18 +38,11 @@ function sendSqsMessage(data, queue_url) {
 
     return sqs.sendMessage(params);
     
-    // let sendSqsMessage = sqs.sendMessage(params).promise();
-
-    // return sendSqsMessage.then((data) => {
-    //     console.log(`OrdersSvc | SUCCESS: ${data.MessageId}`);
-    // }).catch((err) => {
-    //     console.log(`OrdersSvc | ERROR: ${err}`);
-    // }); 
 }
   
 
 exports.handler = async function (event, context) {
-    console.log("Got Event:" + JSON.stringify(event))
+    console.log("Got Event:" + JSON.stringify(event));
     var queue_url = event.queue_url;
     var region = event.region;
 
