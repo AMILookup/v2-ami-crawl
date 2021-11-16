@@ -18,6 +18,6 @@
   "homepage": "https://github.com/AMILookup/v2-ami-crawl#readme",
   "dependencies": {
     "aws": "0.0.3-2",
-    "aws-sdk": "^2.578.0"
+    "aws-sdk": "^2.814.0"
   }
 }
